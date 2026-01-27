@@ -8,7 +8,7 @@
     * python
 * Created a virtual conda environment 
     ```bash
-       conda create --prefix ./.my_env python=3.9.1 pip 
+       conda create --prefix ./.venv python=3.9.1 pip 
        conda init
        cd ~
        source .bashrc
