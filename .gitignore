@@ -1,5 +1,11 @@
-.ipynb_checkpoints/*
+# virtual environments
 .my_env/*
+.venv/*
+
+# notebook files
+.ipynb_checkpoints/*
+
+# data files
 db_data/*
 data/*
 
