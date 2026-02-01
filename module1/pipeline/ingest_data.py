@@ -44,7 +44,11 @@ parse_dates = [
 def run(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, target_table, chunksize):
     """Ingest NYC taxi data into PostgreSQL database."""
     prefix = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow'
+    # yellow taxi data 2021 January
     url = f'{prefix}/yellow_tripdata_{year}-{month:02d}.csv.gz'
+    url2 = 'https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv'
+    # green taxi data 2025 November
+    url3 = 'https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2025-11.parquet'
 
     engine = create_engine(f'postgresql://{pg_user}:{pg_pass}@{pg_host}:{pg_port}/{pg_db}')
 
@@ -72,6 +76,21 @@ def run(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, target_table, ch
             con=engine,
             if_exists='append'
         )
+    print('Loaded Yellow Taxi Table')
+    
+    df_zone = pd.read_csv(url2)
+    df_zone.to_sql(name='zones', con=engine, if_exists='replace')
+
+    print('Loaded Zones table')
+
+    df_green = pd.read_parquet(url3)
+
+    df_green.to_sql(
+        name='green_taxi_trips',
+        con=engine,
+        if_exists='replace'
+    )
+    print('Loaded Green Taxi Table')
 
 if __name__ == '__main__':
     run()

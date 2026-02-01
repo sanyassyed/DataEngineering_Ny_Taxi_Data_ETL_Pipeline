@@ -1,0 +1,22 @@
+# Instructions:
+
+* Run the pipeline as follows
+```bash
+docker-compose up
+docker build -t taxi_ingest:v001 .
+
+# check the network link:
+docker network ls
+
+# it's pipeline_default (or similar based on directory name)
+# now run the script:
+docker run -it --rm\
+  --network=pipeline_default \
+  taxi_ingest:v001 \
+    --pg-user=root \
+    --pg-pass=root \
+    --pg-host=pgdatabase \
+    --pg-port=5432 \
+    --pg-db=ny_taxi \
+    --target-table=yellow_taxi_trips
+```

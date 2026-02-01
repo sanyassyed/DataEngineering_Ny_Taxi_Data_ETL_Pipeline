@@ -3,10 +3,11 @@
 .venv/*
 
 # notebook files
-.ipynb_checkpoints/*
+**/.ipynb_checkpoints/*
+**/*.ipynb
 
 # data files
 db_data/*
 data/*
-
+*.parquet
 
