@@ -1,6 +1,7 @@
 # virtual environments
 .my_env/*
 .venv/*
+**/.env
 
 # notebook files
 **/.ipynb_checkpoints/*
