@@ -18,29 +18,29 @@
 ```sql
 SELECT COUNT(*) AS total_rows
 FROM (
-  SELECT * FROM `zoomcamp.yellow_tripdata_2020_01_ext`
+  SELECT * FROM `ny_taxi.yellow_tripdata_2020_01_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.yellow_tripdata_2020_02_ext`
+  SELECT * FROM `ny_taxi.yellow_tripdata_2020_02_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.yellow_tripdata_2020_03_ext`
+  SELECT * FROM `ny_taxi.yellow_tripdata_2020_03_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.yellow_tripdata_2020_04_ext`
+  SELECT * FROM `ny_taxi.yellow_tripdata_2020_04_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.yellow_tripdata_2020_05_ext`
+  SELECT * FROM `ny_taxi.yellow_tripdata_2020_05_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.yellow_tripdata_2020_06_ext`
+  SELECT * FROM `ny_taxi.yellow_tripdata_2020_06_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.yellow_tripdata_2020_07_ext`
+  SELECT * FROM `ny_taxi.yellow_tripdata_2020_07_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.yellow_tripdata_2020_08_ext`
+  SELECT * FROM `ny_taxi.yellow_tripdata_2020_08_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.yellow_tripdata_2020_09_ext`
+  SELECT * FROM `ny_taxi.yellow_tripdata_2020_09_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.yellow_tripdata_2020_10_ext`
+  SELECT * FROM `ny_taxi.yellow_tripdata_2020_10_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.yellow_tripdata_2020_11_ext`
+  SELECT * FROM `ny_taxi.yellow_tripdata_2020_11_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.yellow_tripdata_2020_12_ext`
+  SELECT * FROM `ny_taxi.yellow_tripdata_2020_12_ext`
 );
 ```
 
@@ -52,29 +52,29 @@ FROM (
 ```sql
 SELECT COUNT(*) AS total_rows
 FROM (
-  SELECT * FROM `zoomcamp.green_tripdata_2020_01_ext`
+  SELECT * FROM `ny_taxi.green_tripdata_2020_01_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.green_tripdata_2020_02_ext`
+  SELECT * FROM `ny_taxi.green_tripdata_2020_02_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.green_tripdata_2020_03_ext`
+  SELECT * FROM `ny_taxi.green_tripdata_2020_03_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.green_tripdata_2020_04_ext`
+  SELECT * FROM `ny_taxi.green_tripdata_2020_04_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.green_tripdata_2020_05_ext`
+  SELECT * FROM `ny_taxi.green_tripdata_2020_05_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.green_tripdata_2020_06_ext`
+  SELECT * FROM `ny_taxi.green_tripdata_2020_06_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.green_tripdata_2020_07_ext`
+  SELECT * FROM `ny_taxi.green_tripdata_2020_07_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.green_tripdata_2020_08_ext`
+  SELECT * FROM `ny_taxi.green_tripdata_2020_08_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.green_tripdata_2020_09_ext`
+  SELECT * FROM `ny_taxi.green_tripdata_2020_09_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.green_tripdata_2020_10_ext`
+  SELECT * FROM `ny_taxi.green_tripdata_2020_10_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.green_tripdata_2020_11_ext`
+  SELECT * FROM `ny_taxi.green_tripdata_2020_11_ext`
   UNION ALL
-  SELECT * FROM `zoomcamp.green_tripdata_2020_12_ext`
+  SELECT * FROM `ny_taxi.green_tripdata_2020_12_ext`
 );
 ```
 
@@ -86,7 +86,7 @@ FROM (
 **Query**
 ```sql
 SELECT COUNT(*) AS total_rows
-FROM `zoomcamp.yellow_tripdata_2021_03_ext`;
+FROM `ny_taxi.yellow_tripdata_2021_03_ext`;
 ```
 
 6) How would you configure the timezone to New York in a Schedule trigger?

@@ -12,3 +12,9 @@ db_data/*
 data/*
 *.parquet
 
+# python files
+**/__pycache__
+
+# airflow files
+**/logs/*
+
