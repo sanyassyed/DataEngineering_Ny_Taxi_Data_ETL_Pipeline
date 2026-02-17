@@ -56,9 +56,27 @@ SHOW ALL TABLES; # to view the tables and the database name and schema name
 cd /home/ubuntu/DataEngineering_Ny_Taxi_Data_ETL_Pipeline/module4/taxi_rides_ny
 dbt debug 
 dbt deps
+
+# Option 1
+dbt build
+
+# Option 2
 dbt seed
 dbt run
+
+# Other commands for dbt GUI
 dbt compile
 dbt docs genrate
 dbt docs serve
+```
+## Homework
+```bash
+dbt seed --target prod
+dbt build --select stg_yellow_tripdata --target prod
+dbt build --select stg_green_tripdata --target prod
+dbt build --select int_trips_unioned --target prod
+dbt build --select int_trips --target prod
+# if build fails use dbt retry
+dbt build --select fct_trips --target prod
+
 ```
