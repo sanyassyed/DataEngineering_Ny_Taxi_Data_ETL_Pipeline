@@ -106,9 +106,17 @@ FROM prod.fct_monthly_zone_revenue
 WHERE trim(lower(service_type)) = 'green' AND
 YEAR(revenue_month) = 2019 AND
 MONTH(revenue_month) = 10;
+```
 
-
---Q6
+```bash
+# Q6 Ingest data
 python3 ingest_fhv.py
+dbt run --select stg_fhv_tripdata --target prod
+duckdb taxi_rides_ny.duckdb
+```
+
+```sql
+--Q6
 SELECT COUNT(*) FROM prod.stg_fhv_tripdata WHERE YEAR(pickup_datetime) = 2019
+.exit
 ```
