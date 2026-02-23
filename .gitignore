@@ -22,3 +22,5 @@ data/*
 # dbt files
 **/taxi_rides_ny.duckdb
 
+
+.bruin.yml
